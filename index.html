@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My movie list</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" href="img/favicon.ico">
+    <script src="scripts/index.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>My Favourite Movies</h1>
+        <span id="add-movie-btn">Add movie</span>
+    </header>
+    <main>
+        <article id="add-form-container">
+            <form action="server.js" id="add-movie-form">
+                <h2>Add new movie </h2>
+                <div id="label-container">
+                    <label for="movie-title" class="form-label">
+                        Movie title
+                        <input type="text" id="first-name" name="movie-title">
+                    </label>
+                    <label for="poster-url" class="form-label">
+                        Poster image URL
+                        <input type="url" id="poster-url" name="poster-url">
+                    </label>
+                    <label class="form-label">
+                        Movie rating
+                        <div class="rating-area">
+                            <input type="radio" id="star-5" name="rating" value="5">
+                            <label for="star-5" title="Excellent"></label>	
+                            <input type="radio" id="star-4" name="rating" value="4">
+                            <label for="star-4" title="Very good"></label>    
+                            <input type="radio" id="star-3" name="rating" value="3">
+                            <label for="star-3" title="Good"></label>  
+                            <input type="radio" id="star-2" name="rating" value="2">
+                            <label for="star-2" title="Bad"></label>    
+                            <input type="radio" id="star-1" name="rating" value="1">
+                            <label for="star-1" title="Awful"></label>
+                        </div>
+                    </label>
+                </div>
+                <footer>
+                    <span id="cancel-btn" class="hoverable-btn">Cancel</span>
+                    <input type="submit" id="submit-btn" value="Add" class="hoverable-btn">
+                </footer>
+            </form>
+        </article>
+        <section id="movie-list">
+            <article class="movie-cell">
+                <h2>Film</h2>
+                <div class="poster-box">
+                    <img src="img/poster/poster1.jpg" alt="Movie poster">
+                </div>
+                <div class="rating-mini">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span> 
+                    <span></span> 
+                </div>
+            </article>
+            <article class="movie-cell">
+                <h2>Film</h2>
+                <div class="poster-box">
+                    <img src="img/poster/poster2.jpg" alt="Movie poster">
+                </div>
+                <div class="rating-mini">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span> 
+                    <span></span> 
+                </div>
+            </article>
+            <article class="movie-cell">
+                <h2>Film</h2>
+                <div class="poster-box">
+                    <img src="img/poster/poster3.jpg" alt="Movie poster">
+                </div>
+                <div class="rating-mini">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span> 
+                    <span></span> 
+                </div>
+            </article>
+            <article class="movie-cell">
+                <h2>Film</h2>
+                <div class="poster-box">
+                    <img src="img/poster/poster4.jpg" alt="Movie poster">
+                </div>
+                <div class="rating-mini">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span> 
+                    <span></span> 
+                </div>
+            </article>
+            <article class="movie-cell">
+                <h2>Film</h2>
+                <div class="poster-box">
+                    <img src="img/poster/poster5.jpg" alt="Movie poster">
+                </div>
+                <div class="rating-mini">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span> 
+                    <span></span> 
+                </div>
+            </article>
+            <article class="movie-cell">
+                <h2>Film</h2>
+                <div class="poster-box">
+                    <img src="img/poster/poster6.jpg" alt="Movie poster">
+                </div>
+                <div class="rating-mini">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span> 
+                    <span></span> 
+                </div>
+            </article>
+            <article class="movie-cell">
+                <h2>Film</h2>
+                <div class="poster-box">
+                    <img src="img/poster/poster7.jpg" alt="Movie poster">
+                </div>
+                <div class="rating-mini">
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span class="active"></span>
+                    <span></span> 
+                    <span></span> 
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>

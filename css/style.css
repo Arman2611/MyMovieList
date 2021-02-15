@@ -1,0 +1,241 @@
+
+* {
+    box-sizing: border-box;
+}
+body {
+    margin: 0px auto;
+}
+body>* {
+    max-width: 1366px;
+    margin: 0px auto;
+}
+
+
+main {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;  
+    background-attachment: fixed; 
+    background-color: #281F55; 
+    background-image: url("../img/background.jpg");
+    background-position: top;
+    background-size: auto;
+    background-repeat: repeat-y;
+}
+
+* {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+header {
+    position: sticky;
+    top: 0px;
+    z-index: 2;
+    height: 60px;
+    color: #FFFFFF;
+    background-color: #281F55;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 40px;
+    box-shadow: 0px 10px 40px -10px #281F55;
+}
+header>h1 {
+    margin: 0px;
+    font-size: 20px;
+}
+#add-movie-btn {    
+    color: #FFFFFF;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 4px 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    border: 2px solid  #281F55;
+    animation-name: btn-border;
+    animation-duration: 2s;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes btn-border {
+    0% {
+        border: 2px solid #281F55;
+    }
+    100% {
+        border: 2px solid #FFFFFF;
+    }
+}
+
+/* Form styling */
+
+#add-form-container {
+    position: fixed;
+    z-index: 3;
+    top: 0px;
+    left: 0px;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(64,64,64, 0.8);
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+form {
+    color: #FFFFFF;
+	margin: 0px auto;
+    background-image: linear-gradient(to bottom, #281F55, #003BA1, #281F55);
+    width: 460px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+	user-select: none;
+	padding: 40px 0 40px 0;
+}
+#add-movie-form footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+#label-container {
+	display: flex;
+    flex-direction: column;
+	align-items: center;
+	width: 350px;
+	margin: 40px 0;
+}
+.form-label {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	color: #FFFFFF;
+	margin: 8px 0;
+	width: 100%;
+}
+.form-label input {
+    padding: 10px 20px;
+    border: 1px solid #D6D6D6;
+    width: 190px;
+}
+.hoverable-btn {
+    background-color: #281F55;
+    color: #FFFFFF;
+    border-radius: 8px;
+    cursor: pointer;
+    border: 1px solid #D6D6D6;
+    margin: 10px 5px;
+    padding: 10px 20px;
+    font-style: italic;
+    font-size: 16px;
+    min-width: 90px;
+    text-align: center;
+}
+#cancel-btn:hover {
+    background-color: #fc0000;
+}
+#submit-btn:hover {
+    background-color: #03B206;
+}
+
+/* Rating radio buttons styling */
+/* https://snipp.ru/html-css/rating-css */
+.rating-area {
+	overflow: hidden;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    /* margin: 8px auto; */
+    /* padding-left: 9px; */
+}
+.rating-area:not(:checked) > input {
+	display: none;
+}
+.rating-area:not(:checked) > label {
+	float: right;
+	width: 36px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: lightgrey;
+	text-shadow: 1px 1px #bbb;
+}
+.rating-area:not(:checked) > label:before {
+	content: '★';
+}
+.rating-area > input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px #c60;
+}
+.rating-area:not(:checked) > label:hover,
+.rating-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+.rating-area > input:checked + label:hover,
+.rating-area > input:checked + label:hover ~ label,
+.rating-area > input:checked ~ label:hover,
+.rating-area > input:checked ~ label:hover ~ label,
+.rating-area > label:hover ~ input:checked ~ label {
+	color: gold;
+	text-shadow: 1px 1px goldenrod;
+}
+/* .rate-area > label:active {
+	position: relative;
+} */
+
+/* mini Rating radio buttons under posters */
+.rating-mini {
+	display: inline-block;
+	font-size: 0;
+}
+.rating-mini span {
+	padding: 0;
+	font-size: 20px;
+	line-height: 1;
+	color: lightgrey;
+}
+.rating-mini > span:before {
+	content: '★';
+}
+.rating-mini > span.active {
+	color: #36B2DF;
+    ;
+}
+
+/* Movie list section styling */
+#movie-list {
+    margin: 0px auto;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(4, 204px);
+    grid-auto-rows: minmax(408px, auto);
+    grid-row-gap: 20px;
+    grid-column-gap: 1em;
+}
+.movie-cell {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 12px;
+    background-color: #FFFFFF;
+    border: 1px solid #e3e3e3;
+}
+.movie-cell h2 {
+    margin: 10px 0;
+}
+.poster-box {
+    overflow: hidden;
+    height: 272px;
+    width: 184px;
+    display: flex;
+    margin-bottom: 14px;
+}
+.poster-box > img {
+    height: 100%;
+    margin: 0px auto;
+}
