@@ -66,6 +66,7 @@ var movies = [
         imageUrl: 'img/poster/poster4.jpg',
         rating: 2,
     },
+    
 ];
 
 
@@ -74,7 +75,7 @@ function renderMovies(i) {
     let listItem = `<li class="movie-cell">`;
     listItem += `<div class="delete-icon-box"><span class="delete-icon" title="Delete this movie">&times;</span></div>`;
     listItem += `<h2>${movies[i].title}</h2><div class="poster-box">`;
-    listItem += `<img src=${movies[i].imageUrl} alt="Movie poster"></div>`;    
+    listItem += `<img src=${movies[i].imageUrl} alt=${movies[i].title}></div>`;    
     listItem += `<div class="rating-mini">`
     let ratingStarsHTML;
     function drawRatingStars (i) {
